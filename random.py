@@ -1,4 +1,22 @@
+# import random
+# r=random
+# a=r.randint(0,100000)
+# print(a)
+# b=r.random()*1000
+# round(b,4)
+# print(b)
+# list=["左侧","右侧","正","反"]
+
+# d=r.choice(list)
+# print("此次抛硬币结果是:",d)
+
+
+
 import random
+r=random
+import turtle
+t=turtle
+t.speed(0)
 
 cnames = {
 'aliceblue':            '#F0F8FF',
@@ -146,7 +164,29 @@ def getList():
     for a in cnames.keys():
         list.append(a)
     return list
-allColor = getList()
+l = getList()
 
 for a in range(10):
-    print(random.choice(allColor))
+    print(random.choice(l))
+    
+#l=["green","cyan","yellow","purple","black","red","blue","orange","pink","floralwhite"]
+for f in range(150):
+    x=r.randrange(-t.window_width()//2,t.window_width()//2)
+    y=r.randrange(-t.window_height()//2,t.window_height()//2)
+    t.up()
+    t.goto(x,y)
+    t.down()
+    a=r.randint(0,100)
+    q=r.choice(l)
+    t.fillcolor(q)
+    t.begin_fill()
+    b=r.randint(3,7)
+    t.circle(a,steps=b)
+    t.end_fill()
+    
+   
+   
+   
+   
+   
+   
